@@ -6,7 +6,7 @@ import numpy as np
 
 PAD = 0
 EOS = 1
-vocab_size = 10
+vocab_size = 9#与这两个有关,有多少中取值vocab_size就是多少；最大就是8取值，此处写9取不到[0,9)vocab_lower=2, vocab_upper=9
 input_embedding_size = 20
 encoder_hidden_units = 20
 decoder_hidden_units = 20
@@ -63,6 +63,7 @@ def make_batch(inputs, max_sequence_length=None):
     inputs_time_major = inputs_batch_major.swapaxes(0, 1)#第0轴和第1轴元素互换
     '''
     X_in=(6steps,9batch,hidden)
+    即输入数据的第一维度是时间维度time_step，第二维度是batch维度
     '''
     return inputs_time_major, sequence_lengths
 
