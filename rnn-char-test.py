@@ -19,8 +19,8 @@ max_grad_norm = 5
 num_epochs = 501
 batch_size = 20
 seq_length = 10
-rnn_model = "D:\kuaipan\workspace\DeepLearning-Lab\model/rnn\model.ckpt"
-restore_path = 'D:\kuaipan\workspace\DeepLearning-Lab\model/rnn/'
+rnn_model = "model.ckpt"
+restore_path = '.'
 
 
 def main():
